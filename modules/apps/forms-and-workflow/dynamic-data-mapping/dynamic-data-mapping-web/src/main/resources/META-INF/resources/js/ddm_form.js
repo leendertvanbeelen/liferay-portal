@@ -1462,7 +1462,7 @@ AUI.add(
 						instance.after('selectedLayoutChange', instance._afterSelectedLayoutChange);
 						instance.after('selectedLayoutPathChange', instance._afterSelectedLayoutPathChange);
 
-						container.delegate('click', instance._handleControlButtonsClick, '.btn', instance);
+						container.delegate('click', instance._handleControlButtonsClick, '> .form-group .btn', instance);
 					},
 
 					getParsedValue: function(value) {
@@ -1754,9 +1754,9 @@ AUI.add(
 
 					_handleControlButtonsClick: function(event) {
 						var instance = this;
-
+						
 						var currentTarget = event.currentTarget;
-
+						
 						if (currentTarget.test('.select-button')) {
 							instance._handleSelectButtonClick(event);
 						}
